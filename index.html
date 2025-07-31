@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPIControl - Seu Portal de Segurança</title>
+    <!-- Tailwind CSS CDN para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para cores personalizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1a1a1a', // Um preto bem escuro
+                        'secondary-gray': '#333333', // Um cinza médio
+                        'light-gray': '#cccccc', // Um cinza claro para texto
+                        'accent-gray': '#555555', // Um cinza para detalhes
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Inter do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-primary-dark text-light-gray min-h-screen flex flex-col">
+
+    <!-- Cabeçalho -->
+    <header class="bg-secondary-gray shadow-lg p-4 md:p-6 flex flex-col md:flex-row justify-between items-center rounded-b-lg">
+        <h1 class="text-3xl md:text-4xl font-bold text-light-gray mb-4 md:mb-0">EPIControl</h1>
+        <nav class="flex space-x-4">
+            <button id="loginBtn" class="bg-accent-gray hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">Login</button>
+            <button id="cadastroBtn" class="bg-accent-gray hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">Cadastro</button>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow container mx-auto p-4 md:p-8">
+        <section class="mb-12 p-6 bg-secondary-gray rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-semibold text-light-gray mb-4">Bem-vindo ao EPIControl!</h2>
+            <p class="text-light-gray leading-relaxed">
+                Sua plataforma completa para segurança no trabalho e gestão de Equipamentos de Proteção Individual (EPIs).
+                Aqui você encontra informações sobre o uso correto e descarte, ferramentas de auxílio, modelos de projetos e um espaço para compra e venda de EPIs.
+            </p>
+        </section>
+
+        <!-- Seção: Uso Correto de EPIs -->
+        <section class="mb-12 p-6 bg-secondary-gray rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-semibold text-light-gray mb-4">Uso Correto de EPIs</h2>
+            <p class="text-light-gray leading-relaxed">
+                Aprenda a importância de cada EPI e como utilizá-los de forma eficaz para garantir sua segurança no ambiente de trabalho.
+                Oferecemos guias detalhados, vídeos instrutivos e dicas de especialistas para que você esteja sempre protegido.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                <div class="bg-primary-dark p-4 rounded-lg shadow-inner">
+                    <h3 class="font-semibold text-light-gray mb-2">Capacetes de Segurança</h3>
+                    <p class="text-sm text-light-gray">Proteção essencial contra impactos e quedas de objetos.</p>
+                </div>
+                <div class="bg-primary-dark p-4 rounded-lg shadow-inner">
+                    <h3 class="font-semibold text-light-gray mb-2">Luvas de Proteção</h3>
+                    <p class="text-sm text-light-gray">Variedade para diferentes riscos: corte, químico, térmico.</p>
+                </div>
+                <div class="bg-primary-dark p-4 rounded-lg shadow-inner">
+                    <h3 class="font-semibold text-light-gray mb-2">Óculos de Segurança</h3>
+                    <p class="text-sm text-light-gray">Escudo contra partículas, poeira e respingos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Descarte Correto de EPIs -->
+        <section class="mb-12 p-6 bg-secondary-gray rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-semibold text-light-gray mb-4">Descarte Correto de EPIs</h2>
+            <p class="text-light-gray leading-relaxed">
+                O descarte adequado de EPIs é crucial para a sustentabilidade e segurança ambiental.
+                Saiba como descartar cada tipo de equipamento, evitando contaminação e promovendo a reciclagem quando possível.
+            </p>
+            <ul class="list-disc list-inside text-light-gray mt-4 ml-4">
+                <li>EPIs contaminados devem ser tratados como resíduos perigosos.</li>
+                <li>EPIs não contaminados podem ser descartados em lixo comum ou reciclagem, se aplicável.</li>
+                <li>Consulte as normas locais para descarte específico.</li>
+            </ul>
+        </section>
+
+        <!-- Seção: Vender EPIs -->
+        <section class="mb-12 p-6 bg-secondary-gray rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-semibold text-light-gray mb-4">Vender EPIs</h2>
+            <p class="text-light-gray leading-relaxed">
+                Nosso marketplace permite que empresas e fornecedores de EPIs alcancem um público qualificado.
+                Anuncie seus produtos de forma fácil e segura, conectando-se com quem busca proteção de qualidade.
+            </p>
+            <button class="mt-4 bg-accent-gray hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">Anunciar EPI</button>
+        </section>
+
+        <!-- Seção: Modelos e Ferramentas de Auxílio -->
+        <section class="mb-12 p-6 bg-secondary-gray rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-semibold text-light-gray mb-4">Modelos e Ferramentas de Auxílio</h2>
+            <p class="text-light-gray leading-relaxed">
+                Oferecemos uma biblioteca de modelos e ferramentas para auxiliar trabalhadores e empresas na gestão da segurança.
+                Desde checklists de inspeção até modelos de planos de emergência, tudo para otimizar seus processos.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div class="bg-primary-dark p-4 rounded-lg shadow-inner">
+                    <h3 class="font-semibold text-light-gray mb-2">Checklists de Segurança</h3>
+                    <p class="text-sm text-light-gray">Modelos editáveis para inspeções diárias.</p>
+                </div>
+                <div class="bg-primary-dark p-4 rounded-lg shadow-inner">
+                    <h3 class="font-semibold text-light-gray mb-2">Calculadora de Risco</h3>
+                    <p class="text-sm text-light-gray">Ferramenta interativa para avaliação de riscos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Modelos de Projetos Prontos -->
+        <section class="mb-12 p-6 bg-secondary-gray rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-semibold text-light-gray mb-4">Modelos de Projetos Prontos</h2>
+            <p class="text-light-gray leading-relaxed">
+                Para clientes que buscam soluções rápidas, disponibilizamos modelos de projetos de segurança do trabalho prontos para uso.
+                Personalize e implemente com facilidade, economizando tempo e recursos.
+            </p>
+            <button class="mt-4 bg-accent-gray hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">Ver Projetos</button>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-secondary-gray text-light-gray p-4 md:p-6 text-center rounded-t-lg shadow-lg mt-auto">
+        <p>&copy; 2025 EPIControl. Todos os direitos reservados.</p>
+        <p>Endereço: Rua Musofago 69 - Arapongas- PR, CEP 86703190</p>
+    </footer>
+
+    <!-- Modais -->
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden">
+        <div class="bg-primary-dark p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button class="absolute top-3 right-3 text-light-gray hover:text-white text-2xl" id="closeLoginModal">&times;</button>
+            <h2 class="text-2xl font-bold text-light-gray mb-6 text-center">Login</h2>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label for="loginEmail" class="block text-light-gray text-sm font-bold mb-2">E-mail ou Usuário:</label>
+                    <input type="text" id="loginEmail" name="loginEmail" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="seuemail@exemplo.com ou seuusuario">
+                </div>
+                <div>
+                    <label for="loginPassword" class="block text-light-gray text-sm font-bold mb-2">Senha:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="********">
+                </div>
+                <button type="submit" class="w-full bg-accent-gray hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Escolha de Cadastro -->
+    <div id="cadastroTypeModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden">
+        <div class="bg-primary-dark p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button class="absolute top-3 right-3 text-light-gray hover:text-white text-2xl" id="closeCadastroTypeModal">&times;</button>
+            <h2 class="text-2xl font-bold text-light-gray mb-6 text-center">Tipo de Cadastro</h2>
+            <div class="flex flex-col space-y-4">
+                <button id="pessoaFisicaBtn" class="bg-accent-gray hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">Pessoa Física</button>
+                <button id="empresaBtn" class="bg-accent-gray hover:bg-gray-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">Empresa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro Pessoa Física -->
+    <div id="cadastroPessoaFisicaModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden">
+        <div class="bg-primary-dark p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button class="absolute top-3 right-3 text-light-gray hover:text-white text-2xl" id="closeCadastroPessoaFisicaModal">&times;</button>
+            <h2 class="text-2xl font-bold text-light-gray mb-6 text-center">Cadastro Pessoa Física</h2>
+            <form id="cadastroPessoaFisicaForm" class="space-y-4">
+                <div>
+                    <label for="pfNome" class="block text-light-gray text-sm font-bold mb-2">Nome Completo:</label>
+                    <input type="text" id="pfNome" name="pfNome" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="Seu nome">
+                </div>
+                <div>
+                    <label for="pfEmail" class="block text-light-gray text-sm font-bold mb-2">E-mail:</label>
+                    <input type="email" id="pfEmail" name="pfEmail" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="seuemail@exemplo.com">
+                </div>
+                <div>
+                    <label for="pfPassword" class="block text-light-gray text-sm font-bold mb-2">Senha:</label>
+                    <input type="password" id="pfPassword" name="pfPassword" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="********">
+                </div>
+                <div>
+                    <label for="pfCpf" class="block text-light-gray text-sm font-bold mb-2">CPF:</label>
+                    <input type="text" id="pfCpf" name="pfCpf" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="000.000.000-00">
+                </div>
+                <button type="submit" class="w-full bg-accent-gray hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro Empresa -->
+    <div id="cadastroEmpresaModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden">
+        <div class="bg-primary-dark p-6 rounded-lg shadow-xl w-full max-w-md relative">
+            <button class="absolute top-3 right-3 text-light-gray hover:text-white text-2xl" id="closeCadastroEmpresaModal">&times;</button>
+            <h2 class="text-2xl font-bold text-light-gray mb-6 text-center">Cadastro Empresa</h2>
+            <form id="cadastroEmpresaForm" class="space-y-4">
+                <div>
+                    <label for="empresaNome" class="block text-light-gray text-sm font-bold mb-2">Nome da Empresa:</label>
+                    <input type="text" id="empresaNome" name="empresaNome" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="Nome da sua empresa">
+                </div>
+                <div>
+                    <label for="empresaCnpj" class="block text-light-gray text-sm font-bold mb-2">CNPJ:</label>
+                    <input type="text" id="empresaCnpj" name="empresaCnpj" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="00.000.000/0000-00">
+                </div>
+                <div>
+                    <label for="empresaEmail" class="block text-light-gray text-sm font-bold mb-2">E-mail:</label>
+                    <input type="email" id="empresaEmail" name="empresaEmail" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="contato@suaempresa.com">
+                </div>
+                <div>
+                    <label for="empresaPassword" class="block text-light-gray text-sm font-bold mb-2">Senha:</label>
+                    <input type="password" id="empresaPassword" name="empresaPassword" class="bg-accent-gray text-light-gray border border-gray-600 rounded-lg w-full py-2 px-3 leading-tight focus:outline-none focus:border-gray-500" placeholder="********">
+                </div>
+                <button type="submit" class="w-full bg-accent-gray hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo JavaScript personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
