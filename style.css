@@ -1,0 +1,122 @@
+/* style.css */
+
+/* Estilos globais adicionais, se necessário, além do Tailwind */
+body {
+    /* Define a altura mínima do corpo para que o rodapé fique no final */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* style.css */
+
+/* Estilos globais adicionais, se necessário, além do Tailwind */
+body {
+    /* Define a altura mínima do corpo para que o rodapé fique no final */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para o contêiner principal para garantir espaçamento */
+.container {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+}
+
+/* Estilos para os botões de fechar dos modais */
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #cccccc; /* light-gray */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal-close-btn:hover {
+    color: #ffffff; /* branco puro no hover */
+}
+
+/* Estilos para os inputs dentro dos modais */
+.modal-input {
+    background-color: #555555; /* accent-gray */
+    color: #cccccc; /* light-gray */
+    border: 1px solid #666666; /* Um cinza um pouco mais claro para a borda */
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    line-height: 1.25;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: #888888; /* Um cinza mais claro no foco */
+}
+
+/* Estilos para os botões dentro dos modais */
+.modal-button {
+    background-color: #555555; /* accent-gray */
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.modal-button:hover {
+    background-color: #333333; /* secondary-gray */
+}
+
+/* Estilo para o contêiner principal para garantir espaçamento */
+.container {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+}
+
+/* Estilos para os botões de fechar dos modais */
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #cccccc; /* light-gray */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.modal-close-btn:hover {
+    color: #ffffff; /* branco puro no hover */
+}
+
+/* Estilos para os inputs dentro dos modais */
+.modal-input {
+    background-color: #555555; /* accent-gray */
+    color: #cccccc; /* light-gray */
+    border: 1px solid #666666; /* Um cinza um pouco mais claro para a borda */
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    line-height: 1.25;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.modal-input:focus {
+    outline: none;
+    border-color: #888888; /* Um cinza mais claro no foco */
+}
+
+/* Estilos para os botões dentro dos modais */
+.modal-button {
+    background-color: #555555; /* accent-gray */
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.modal-button:hover {
+    background-color: #333333; /* secondary-gray */
+}
